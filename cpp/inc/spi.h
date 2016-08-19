@@ -46,9 +46,7 @@ private:
   gpio pin_A;
   gpio pin_B;
   gpio pin_CS;
-  static PotMemFn ptr_receive[2];
-  static PotMemF ptr_transmite[2];
-  static ptr_ex ptr_exchange[2];
+
 
 
 //functions

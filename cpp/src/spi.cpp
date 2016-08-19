@@ -3,10 +3,6 @@
 //CS(A),SCK(B),MOSI(A), MISO(A)
 uint8_t spi::pins_d[4]={5,0,6,7};
 
-PotMemFn spi::ptr_receive[2] = {};
-
-PotMemF spi::ptr_transmite[2] = {};
-ptr_ex spi::ptr_exchange[2] =  {};
 
 spi::spi(Division d_, Cpol cpol_, Cpha cpha_, Mode m, Role r)
 :pin_A (gpio::A), pin_B (gpio::B)
