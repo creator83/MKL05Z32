@@ -1,8 +1,8 @@
 #include "gpio.h"
 
 
-GPIO_MemMapPtr gpio::portAdr [5] = {PTA_BASE_PTR, PTB_BASE_PTR, PTC_BASE_PTR, PTD_BASE_PTR, PTE_BASE_PTR};
-PORT_MemMapPtr gpio::portAdrSet [5] = {PORTA_BASE_PTR, PORTB_BASE_PTR, PORTC_BASE_PTR, PORTD_BASE_PTR, PORTE_BASE_PTR};
+GPIO_MemMapPtr gpio::portAdr [2] = {PTA_BASE_PTR, PTB_BASE_PTR};
+PORT_MemMapPtr gpio::portAdrSet [2] = {PORTA_BASE_PTR, PORTB_BASE_PTR};
 
 
 gpio::gpio()

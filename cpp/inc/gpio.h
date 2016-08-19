@@ -1,4 +1,4 @@
-#include "MKL17Z4.h"
+#include "MKL05Z4.h"
 
 
 #ifndef GPIO_H
@@ -11,7 +11,7 @@ class gpio
 {
 //variables
 public:
-  enum Port {A , B , C , D, E};
+  enum Port {A , B };
   enum mode {Alt0 , Alt1 , Alt2 , Alt3, Alt4 , Alt5 , Alt6};
   enum dir {Input, Output};
   enum speed {Low = 0 , Medium = 1 , High=3};
@@ -19,8 +19,8 @@ public:
 
 protected:
 private:
-  static GPIO_MemMapPtr portAdr [5];
-  static PORT_MemMapPtr portAdrSet [5];
+  static GPIO_MemMapPtr portAdr [2];
+  static PORT_MemMapPtr portAdrSet [2];
   unsigned char prt;
 
 //functions
