@@ -39,8 +39,17 @@ private:
 public:
   //constructor for SPI1
   i2c();
-  void start ();
-  void transmit_adress(uint8_t add);
+  bool start ();
+  void restart ();
+  bool stop ();
+  void wait ();
+
+  void write_byte (uint8_t data);
+  uint8_t read_byte ();
+
+  void give_nack ();
+  void give_ack ();
+  bool get_ack ();
 
 private:
 };
