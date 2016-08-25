@@ -47,6 +47,7 @@ bool i2c::stop ()
 	timeout++;
 	if (timeout >= 10000) return false;
 	else return true;
+	//проба git
 }
 
 /*
