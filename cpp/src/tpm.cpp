@@ -1,6 +1,6 @@
 #include "tpm.h"
 
-TPM_MemMapPtr tpm::tpm_ptr[3]={TPM0_BASE_PTR, TPM1_BASE_PTR, TPM0_BASE_PTR};
+TPM_MemMapPtr tpm::tpm_ptr[3]={TPM0_BASE_PTR, TPM1_BASE_PTR};
 
 
 

@@ -1,4 +1,4 @@
-#include "MKL17Z4.h"
+#include "MKL05Z4.h"
 #include "tact.h"
 #include "gpio.h"
 
@@ -14,7 +14,7 @@ public:
 	enum channel {ch0, ch1, ch2, ch3, ch4, ch5};
 	enum Port {A, B, C, D, E};
 	enum alt_mode {Alt0 , Alt1 , Alt2 , Alt3, Alt4 , Alt5 , Alt6};
-	enum N_TPM {TPM_0, TPM_1,TPM_2};
+	enum N_TPM {TPM_0, TPM_1};
 	enum mode_clock {TPM_disable, TPM_inc, TPM_ext};
 	enum MODE {Input, Output_toggle, Output_pulse, Edge_Pwm, Center_Pwm, Software_compare};
 	enum division {div1, div2, div4, div8, div16, div32, div64, div128};
