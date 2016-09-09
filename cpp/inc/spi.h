@@ -43,9 +43,9 @@ public:
   uint8_t p_CS;
 
 private:
-  gpio pin_A;
-  gpio pin_B;
-  gpio pin_CS;
+  Gpio pin_A;
+  Gpio pin_B;
+  Gpio pin_CS;
 
 
 

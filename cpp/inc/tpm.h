@@ -27,7 +27,7 @@ private:
 	uint8_t n_ch;
 	static TPM_MemMapPtr tpm_ptr[3];
 	uint8_t num_tpm;
-	gpio pin;
+	Gpio pin;
 
 public:
 	tpm(N_TPM n_, channel ch, division d);

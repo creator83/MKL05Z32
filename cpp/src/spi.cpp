@@ -5,14 +5,14 @@ uint8_t spi::pins_d[4]={5,0,6,7};
 
 
 spi::spi(Division d_, Cpol cpol_, Cpha cpha_, Mode m, Role r)
-:pin_A (gpio::A), pin_B (gpio::B)
+:pin_A (Gpio::A), pin_B (Gpio::B)
 {
   
   //===Settings pins===//
 
   //Settings pins SCK, MOSI, MISO as ALT3
-	pin_A.setOutPort (((1 << pins_d[CS])|(1 << pins_d[MOSI])|(1 << pins_d[MISO])), gpio::Alt3);
-	pin_B.setOutPin (pins_d[SCK], gpio::Alt3);
+	pin_A.setOutPort (((1 << pins_d[CS])|(1 << pins_d[MOSI])|(1 << pins_d[MISO])), Gpio::Alt3);
+	pin_B.setOutPin (pins_d[SCK], Gpio::Alt3);
 
   //Turn on tacting SPI1
   SIM->SCGC4 |= SIM_SCGC4_SPI0_MASK;
