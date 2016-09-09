@@ -21,8 +21,11 @@ void Hd44780::init ()
 	delay_ms (1);
 	tetra (0x02);
 	delay_ms (1);
+
+	// 2 strings
 	send_byte (0x28, command);
 	delay_ms (1);
+	//turn on display
 	send_byte (0x0C, command);
 	delay_ms (1);
 	send_byte (0x06, command);
@@ -60,11 +63,7 @@ void Hd44780::send_data (uint8_t b)
 
 void Hd44780::send_string (uint8_t *str)
 {
-	while (*str)
-	{
-		send_data (*str);
-		str++;
-	}
+	while (*str)send_data (*str++);
 }
 
 void Hd44780::clear ()
@@ -77,6 +76,13 @@ void Hd44780::set_position (uint8_t col, uint8_t row)
 {
 	uint8_t addr = second_col*col + row;
 	send_byte (addr|set_dram_addr, command);
+}
+
+void Hd44780::newChar (uint8_t *ch, uint8_t addr)
+{
+	send_byte ((set_cgram_addr+addr*8),command);
+	for (uint8_t i=0;i<8;++i, ch++) send_data (*ch);
+	//send_byte (set_dram_addr, command);
 }
 
 
