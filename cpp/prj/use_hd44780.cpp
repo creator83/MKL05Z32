@@ -16,7 +16,6 @@ int main ()
 	display.set_position(1,0);
 	numtostr (6543, number);
 	display.send_string (number);
-
 	while (1)
 	{
 		
