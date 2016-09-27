@@ -11,6 +11,7 @@ void numtostr (uint16_t number, uint8_t * arr);
 int main ()
 {
 	Hd44780 display;
+	__asm ("nop");
 	display.set_position(0,0);
 	display.send_string ((uint8_t*)"Hello!!!");
 	display.set_position(1,0);
